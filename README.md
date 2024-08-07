@@ -6,17 +6,14 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 
 + python >=3.12
 + pickle
-+ re
 + numpy
 + pandas
 + torch
-+ math
 + argparse
 + datetime
 + json
 + yaml
-+ gc
-+ sklearn
++ scikit-learn
 + tqdm
 + category_encoders
 
