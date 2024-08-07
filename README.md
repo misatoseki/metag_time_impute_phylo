@@ -24,4 +24,6 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 
 Run exe.py in the directory. See scripts for reference.
 
+## Acknowledgement
 
+The codes of the diffusion model were developed based on [CSDI](https://github.com/ermongroup/CSDI).
