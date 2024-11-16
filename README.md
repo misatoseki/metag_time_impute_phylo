@@ -1,6 +1,6 @@
 # Diffusion model for imputing time-series gut microbiome profiles
 
-This repository stores codes and datasets used in the paper titled "Diffusion model for imputing time-series gut microbiome profiles".
+This repository stores codes and datasets used in the paper titled "Diffusion model approach for imputing time-series gut microbiome profiles from 16S rRNA and metagenomic sequencing data".
 
 ## Pre-requisites
 
