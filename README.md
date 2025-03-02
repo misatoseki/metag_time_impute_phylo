@@ -19,7 +19,14 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 
 ## How to use
 
-Run exe.py in the directory. See scripts for reference.
+### Prepare input data
+Prepare time-series metagenomic relative abundance profile. See `indata/rel-species-table.csv` for reference.
+
+### CLR transformation
+Transform relative abundances using the centered log ratio (clr) by running `clr_transformation.py`. See script for reference.
+
+### Train and Evaluate model
+Run `exe.py`. See scripts for reference.
 
 ## Acknowledgement
 
