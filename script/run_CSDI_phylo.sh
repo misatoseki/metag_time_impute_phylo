@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#$ -cwd
-
 cd ../CSDI_phylo
 LOGPATH=../logs
 
