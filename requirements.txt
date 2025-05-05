@@ -1,0 +1,12 @@
+python >=3.12
+pickle
+numpy
+pandas
+torch
+argparse
+datetime
+json
+yaml
+scikit-learn
+tqdm
+category_encoders
