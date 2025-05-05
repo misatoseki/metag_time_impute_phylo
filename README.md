@@ -12,6 +12,7 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 ├── Mean/ # Mean interpolation
 ├── indata/ # Example input files
 ├── scripts/ # Optional batch scripts
+├── logs/ # For storing log files
 ├── requirements.txt # Python dependencies
 └── README.md
 ```
