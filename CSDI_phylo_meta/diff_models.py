@@ -57,10 +57,8 @@ class diff_CSDI(nn.Module):
             embedding_dim=config["diffusion_embedding_dim"],
         )
 
-        #self.input_projection = Conv1d_with_init(inputdim, self.channels, 1)
-        self.input_projection = Conv1d_with_init(self.channels, self.channels, 1) # 2024/6/27 modified
+        self.input_projection = Conv1d_with_init(self.channels, self.channels, 1)
 
-        # 2025/3/21 modified
         self.conv_blocks = nn.ModuleList()
         for _ in range(len(cluster_size)):
             conv_layers = nn.Sequential(
@@ -69,7 +67,6 @@ class diff_CSDI(nn.Module):
             )
             self.conv_blocks.append(conv_layers)
        
-        # 2025/3/23 added
         self.cat_conv = nn.Conv2d(2, self.channels, kernel_size=(1, 1))
 
         self.output_projection1 = Conv1d_with_init(self.channels, self.channels, 1)
@@ -91,7 +88,6 @@ class diff_CSDI(nn.Module):
     def forward(self, x, cond_info, diffusion_step):
         B, inputdim, K, L = x.shape # (B,2,K,L)
 
-        # 2025/3/23 modified
         splits = torch.split(x, self.cluster_size, dim=2)
 
         output_splits = []
@@ -105,8 +101,7 @@ class diff_CSDI(nn.Module):
 
         x = F.relu(torch.cat(output_splits, dim=2))
 
-        #x = x.reshape(B, inputdim, K * L)
-        x = x.reshape(B, self.channels, K * L) # 2024/6/27 modified
+        x = x.reshape(B, self.channels, K * L) 
         x = self.input_projection(x)
         x = F.relu(x)
         x = x.reshape(B, self.channels, K, L)
