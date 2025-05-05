@@ -3,7 +3,7 @@
 This repository stores codes and datasets used in the paper titled "Diffusion model approach for imputing time-series gut microbiome profiles from 16S rRNA and metagenomic sequencing data".
 
 ## Repository structure
-
+```
 .
 ├── CSDI_phylo/ # Diffusion-based phylum-level CNN-enhanced imputation
 ├── CSDI_phylo_meta # Diffusion-based phylum-level CNN-enhanced imputation incorporating metadata information
@@ -14,7 +14,7 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 ├── scripts/ # Optional batch scripts
 ├── requirements.txt # Python dependencies
 └── README.md
-
+```
 ## How to use
 
 ### Prepare input data
