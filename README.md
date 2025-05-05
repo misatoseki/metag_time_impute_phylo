@@ -2,20 +2,9 @@
 
 This repository stores codes and datasets used in the paper titled "Diffusion model approach for imputing time-series gut microbiome profiles from 16S rRNA and metagenomic sequencing data".
 
-## Pre-requisites
+## Models
 
-+ python >=3.12
-+ pickle
-+ numpy
-+ pandas
-+ torch
-+ argparse
-+ datetime
-+ json
-+ yaml
-+ scikit-learn
-+ tqdm
-+ category_encoders
+
 
 ## How to use
 
