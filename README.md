@@ -21,7 +21,7 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 Prepare time-series metagenomic relative abundance profile. See `indata/rel-species-table.csv` for reference.
 
 ### CLR transformation
-Transform relative abundances using the centered log ratio (clr) by running `clr_transformation.py`. See script for reference.
+If profile transformed by the centered log ratio (clr) is not avabilable, transform relative abundances by running `clr_transformation.py`. See script for reference.
 
 ### Train and Evaluate model
 Run `exe.py`. See scripts for reference.
