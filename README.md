@@ -26,7 +26,12 @@ Prepare time-series metagenomic relative abundance profile. See `indata/DIABIMMU
 If profile transformed by the centered log ratio (clr) is not avabilable, transform relative abundances by running `clr_transformation.py`. See script for reference.
 
 ### Train and Evaluate model
-Run `exe.py`. See scripts for reference.
+Run `exe.py`. 
+```
+cd CSDI_phylo
+python exe.py --testmissingratio 0.1 --dataset_path "../indata/DIABIMMUNE_16S/rel-species-table_clr.csv" --mask_path "../indata/DIABIMMUNE_16S/mask_0.1.csv"
+```
+See scripts for reference.
 
 ## Acknowledgement
 
