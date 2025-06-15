@@ -11,6 +11,7 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 ├── LOCF/ # LOCF interpolation
 ├── Mean/ # Mean interpolation
 ├── indata/ # Example input files
+├── outdata/ # For storing output files
 ├── scripts/ # Optional batch scripts
 ├── logs/ # For storing log files
 ├── requirements.txt # Python dependencies
@@ -19,13 +20,29 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 ## How to use
 
 ### Prepare input data
-Prepare time-series metagenomic relative abundance profile. See `indata/DIABIMMUNE_16S/rel-species-table.csv` for reference.
+Prepare two input files.
++ Time-series metagenomic relative abundance profile. See `indata/DIABIMMUNE_16S/rel-species-table.csv` for reference.
++ Mask data. See `indata/DIABIMMUNE_16S/mask_0.1.csv` for reference.
 
 ### CLR transformation
-If profile transformed by the centered log ratio (clr) is not avabilable, transform relative abundances by running `clr_transformation.py`. See script for reference.
+If profile transformed by the centered log ratio (clr) is not avabilable, transform relative abundances by running `clr_transformation.py`. 
+```
+cd CSDI_phylo
+input_profile_RA="../indata/DIABIMMUNE_16S/rel-species-table.csv" # Replace as appropriate
+
+python clr_transformation.py $input_profile_RA "Y"
+```
+See script `run_clr_transformation.sh` for reference.
 
 ### Train and Evaluate model
-Run `exe.py`. See scripts for reference.
+Run `exe.py`. 
+```
+input_profile_CLR="../indata/DIABIMMUNE_16S/rel-species-table_clr.csv" # Replace as appropriate
+input_mask_data="../indata/DIABIMMUNE_16S/mask_0.1.csv" # Replace as appropriate
+
+python exe.py --testmissingratio 0.1 --dataset_path $input_profile_CLR --mask_path $input_mask_data
+```
+See script `run_CSDI_phylo.sh` for reference.
 
 ## Acknowledgement
 
