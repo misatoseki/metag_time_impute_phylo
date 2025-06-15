@@ -6,7 +6,8 @@ This repository stores codes and datasets used in the paper titled "Diffusion mo
 ```
 .
 ├── CSDI_phylo/ # Diffusion-based phylum-level CNN-enhanced imputation
-├── CSDI_phylo_meta # Diffusion-based phylum-level CNN-enhanced imputation incorporating metadata information
+├── CSDI_phylo_meta_spatial # Metadata-enhanced imputation with spatial concatenation
+├── CSDI_phylo_meta_channel # Metadata-enhanced imputation with channel-wise concatenation
 ├── Linear/ # Linear interpolation
 ├── LOCF/ # LOCF interpolation
 ├── Mean/ # Mean interpolation
